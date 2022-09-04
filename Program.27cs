@@ -1,0 +1,16 @@
+﻿// напишите программу, кот. принимает на вход число и выдает сумму цифр в числе
+int SumOfNumber(int num)
+{
+    int summa=0;
+    while(num>0)
+    {
+        summa += num % 10;
+        num /= 10;
+    }
+    return summa;
+}
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int summa=SumOfNumber(number);
+Console.WriteLine($"Сумма цифр в числе {number} = {summa}");
+
